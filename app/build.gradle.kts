@@ -5,12 +5,13 @@ plugins {
 
 android {
     namespace = "Infinityfinder.sidebar"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "Infinityfinder.sidebar"
         minSdk = 31
-        targetSdk = 34
+        //noinspection EditedTargetSdkVersion
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
