@@ -2,15 +2,68 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:background="#80000000"
-    android:orientation="vertical">
+    android:background="@drawable/rounded_background"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:gravity="center">
 
-    <TextView
-        android:id="@+id/floating_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Floating Test"
-        android:textColor="#FFFFFF"
-        android:padding="16dp" />
+    <!-- 音量+ -->
+<ImageButton
+android:id="@+id/btn_volume_up"
+android:layout_width="48dp"
+android:layout_height="48dp"
+android:background="?attr/selectableItemBackgroundBorderless"
+android:scaleType="centerInside"
+android:src="@drawable/ic_baseline_volume_up"
+android:contentDescription="音量+" />
 
-</LinearLayout>
+    <!-- 音量- -->
+<ImageButton
+android:id="@+id/btn_volume_down"
+android:layout_width="48dp"
+android:layout_height="48dp"
+android:background="?attr/selectableItemBackgroundBorderless"
+android:scaleType="centerInside"
+android:src="@drawable/ic_baseline_volume_down"
+android:contentDescription="音量-" />
+
+<ImageButton
+android:id="@+id/btn_power"
+android:layout_width="48dp"
+android:layout_height="48dp"
+android:background="?attr/selectableItemBackgroundBorderless"
+android:scaleType="centerInside"
+android:src="@android:drawable/ic_lock_power_off"
+android:contentDescription="电源" />
+
+    <!-- 截图 -->
+<ImageButton
+android:id="@+id/btn_screenshot"
+android:layout_width="48dp"
+android:layout_height="48dp"
+android:background="?attr/selectableItemBackgroundBorderless"
+android:scaleType="centerInside"
+android:src="@android:drawable/ic_menu_camera"
+android:contentDescription="截图" />
+
+    <!-- 返回上一级 -->
+<ImageButton
+android:id="@+id/btn_back"
+android:layout_width="48dp"
+android:layout_height="48dp"
+android:background="?attr/selectableItemBackgroundBorderless"
+android:scaleType="centerInside"
+android:src="@android:drawable/ic_media_previous"
+android:contentDescription="返回上一级" />
+
+    <!-- 返回桌面 -->
+<ImageButton
+android:id="@+id/btn_home"
+android:layout_width="48dp"
+android:layout_height="48dp"
+android:background="?attr/selectableItemBackgroundBorderless"
+android:scaleType="centerInside"
+android:src="@drawable/baseline_home"
+android:contentDescription="返回桌面" />
+
+    </LinearLayout>
