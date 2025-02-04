@@ -1,3 +1,8 @@
+//
+// SPDX-FileCopyrightText: 2025 Littlenine & Uwugl
+// SPDX-License-Identifier: GPL-3.0-only
+//
+
 package Infinityfinder.sidebar
 
 import android.content.Intent

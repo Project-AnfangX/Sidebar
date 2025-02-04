@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2025 Littlenine & Uwugl
+     SPDX-License-Identifier: GPL-3.0-only
+-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
@@ -7,7 +11,7 @@
     android:padding="8dp"
     android:gravity="center">
 
-    <!-- 音量+ -->
+    <!-- Volume Up -->
 <ImageButton
 android:id="@+id/btn_volume_up"
 android:layout_width="48dp"
@@ -15,9 +19,9 @@ android:layout_height="48dp"
 android:background="?attr/selectableItemBackgroundBorderless"
 android:scaleType="centerInside"
 android:src="@drawable/ic_baseline_volume_up"
-android:contentDescription="音量+" />
+android:contentDescription="Volume Up" />
 
-    <!-- 音量- -->
+    <!-- Volume Down -->
 <ImageButton
 android:id="@+id/btn_volume_down"
 android:layout_width="48dp"
@@ -25,8 +29,9 @@ android:layout_height="48dp"
 android:background="?attr/selectableItemBackgroundBorderless"
 android:scaleType="centerInside"
 android:src="@drawable/ic_baseline_volume_down"
-android:contentDescription="音量-" />
-
+android:contentDescription="Volume Down" />
+    
+    <!-- Power -->
 <ImageButton
 android:id="@+id/btn_power"
 android:layout_width="48dp"
@@ -34,9 +39,9 @@ android:layout_height="48dp"
 android:background="?attr/selectableItemBackgroundBorderless"
 android:scaleType="centerInside"
 android:src="@android:drawable/ic_lock_power_off"
-android:contentDescription="电源" />
+android:contentDescription="Power" />
 
-    <!-- 截图 -->
+    <!-- Screenshot -->
 <ImageButton
 android:id="@+id/btn_screenshot"
 android:layout_width="48dp"
@@ -44,9 +49,9 @@ android:layout_height="48dp"
 android:background="?attr/selectableItemBackgroundBorderless"
 android:scaleType="centerInside"
 android:src="@android:drawable/ic_menu_camera"
-android:contentDescription="截图" />
+android:contentDescription="Screenshot" />
 
-    <!-- 返回上一级 -->
+    <!-- Back -->
 <ImageButton
 android:id="@+id/btn_back"
 android:layout_width="48dp"
@@ -54,9 +59,9 @@ android:layout_height="48dp"
 android:background="?attr/selectableItemBackgroundBorderless"
 android:scaleType="centerInside"
 android:src="@android:drawable/ic_media_previous"
-android:contentDescription="返回上一级" />
+android:contentDescription="Back" />
 
-    <!-- 返回桌面 -->
+    <!-- Home -->
 <ImageButton
 android:id="@+id/btn_home"
 android:layout_width="48dp"
@@ -64,6 +69,6 @@ android:layout_height="48dp"
 android:background="?attr/selectableItemBackgroundBorderless"
 android:scaleType="centerInside"
 android:src="@drawable/baseline_home"
-android:contentDescription="返回桌面" />
+android:contentDescription="Home" />
 
     </LinearLayout>

@@ -1,3 +1,8 @@
+//
+// SPDX-FileCopyrightText: 2025 Littlenine & Uwugl
+// SPDX-License-Identifier: GPL-3.0-only
+//
+
 package Infinityfinder.sidebar
 
 import android.app.Activity
@@ -20,13 +25,11 @@ class ScreenshotActivity : Activity() {
     private lateinit var mediaProjectionManager: MediaProjectionManager
     private var mediaProjection: MediaProjection? = null
     private val handler = Handler(Looper.getMainLooper())
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mediaProjectionManager = getSystemService(MEDIA_PROJECTION_SERVICE) as MediaProjectionManager
         startActivityForResult(mediaProjectionManager.createScreenCaptureIntent(), 1001)
     }
-
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == 1001 && resultCode == RESULT_OK && data != null) {
@@ -37,15 +40,12 @@ class ScreenshotActivity : Activity() {
             finish()
         }
     }
-
     private fun captureScreenshot() {
         val metrics = resources.displayMetrics
         val width = metrics.widthPixels
         val height = metrics.heightPixels
-
         val surfaceView = SurfaceView(this)
         val bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
-
         PixelCopy.request(surfaceView.holder.surface, bitmap, { result ->
             if (result == PixelCopy.SUCCESS) {
                 saveBitmap(bitmap)
@@ -53,7 +53,6 @@ class ScreenshotActivity : Activity() {
             finish()
         }, handler)
     }
-
     private fun saveBitmap(bitmap: Bitmap) {
         val file = File(getExternalFilesDir(null), "screenshot.png")
         FileOutputStream(file).use { bitmap.compress(Bitmap.CompressFormat.PNG, 100, it) }

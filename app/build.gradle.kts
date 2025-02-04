@@ -5,17 +5,14 @@ plugins {
 
 android {
     namespace = "Infinityfinder.sidebar"
-    compileSdk = 35
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "Infinityfinder.sidebar"
-        minSdk = 31
-        //noinspection EditedTargetSdkVersion
-        targetSdk = 35
-        versionCode = 35
-        versionName = "1.3"
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        minSdk = 34
+        targetSdk = 34
+        versionCode = 1
+        versionName = "1.0"
     }
 
     buildTypes {
@@ -23,7 +20,6 @@ android {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
             )
         }
     }
@@ -47,7 +43,4 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
 }

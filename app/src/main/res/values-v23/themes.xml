@@ -1,3 +1,7 @@
+<!--
+     SPDX-FileCopyrightText: 2025 Littlenine & Uwugl
+     SPDX-License-Identifier: GPL-3.0-only
+-->
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <style name="Theme.SIdeBar" parent="Base.Theme.SIdeBar">

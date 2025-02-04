@@ -1,3 +1,8 @@
+//
+// SPDX-FileCopyrightText: 2025 Littlenine & Uwugl
+// SPDX-License-Identifier: GPL-3.0-only
+//
+
 package Infinityfinder.sidebar
 
 import android.app.Instrumentation
@@ -13,6 +18,7 @@ import android.view.*
 import android.widget.ImageButton
 import android.widget.Toast
 import android.net.Uri
+import android.os.SystemClock
 import android.os.Environment
 import android.hardware.input.InputManager
 import android.view.KeyEvent
@@ -27,13 +33,13 @@ import androidx.core.content.ContextCompat
 class FloatingViewService : Service() {
     private lateinit var windowManager: WindowManager
     private lateinit var floatingView: View
-    private var params: WindowManager.LayoutParams = WindowManager.LayoutParams()
+    private var params: WindowManager.LayoutParams = WindowManager.LayoutParams()  // init params
     private val handler = Handler(Looper.getMainLooper())
     private lateinit var mediaProjection: MediaProjection
 
     override fun onCreate() {
         super.onCreate()
-        setupFloatingWindow()
+	setupFloatingWindow()
         setupButtonClickListeners()
     }
 
@@ -59,6 +65,7 @@ class FloatingViewService : Service() {
         }
 
         windowManager.addView(floatingView, params)
+
         setupTouchListener()
     }
 
@@ -67,7 +74,7 @@ class FloatingViewService : Service() {
             private var initialX = 0
             private var initialTouchX = 0f
 
-            override fun onTouch(v: View?, event: MotionEvent): Boolean {
+	    override fun onTouch(v: View?, event: MotionEvent): Boolean {
                 when (event.action) {
                     MotionEvent.ACTION_DOWN -> {
                         initialX = params.x
@@ -148,7 +155,6 @@ class FloatingViewService : Service() {
             Toast.makeText(this, "需要系统权限", Toast.LENGTH_SHORT).show()
         }
     }
-
     override fun onDestroy() {
         super.onDestroy()
         if (::floatingView.isInitialized) windowManager.removeView(floatingView)

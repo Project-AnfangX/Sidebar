@@ -1,31 +1,16 @@
+
+<!--
+     SPDX-FileCopyrightText: 2025 Littlenine & Uwugl
+     SPDX-License-Identifier: GPL-3.0-only
+-->
+
 <resources>
-    <string name="app_name">SIdeBar</string>
+    <string name="app_name">SideBar</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Open Sidebar</string>
     <string name="previous">Previous</string>
-
-    <string name="lorem_ipsum">
-        Uwugl Mio~
-        Uwugl Mio~
-        Uwugl Mio~
-        Uwugl Mio~
-        Uwugl Mio~
-        Uwugl Mio~
-        Uwugl Mio~
-        Uwugl Mio~
-        Uwugl Mio~
-        Uwugl Mio~
-        Uwugl Mio~
-        Uwugl Mio~
-        Uwugl Mio~
-        Uwugl Mio~
-        Uwugl Mio~
-        Uwugl Mio~
-        Uwugl Mio~
-        Uwugl Mio~
-        Littlenine End~
-    </string>
+    <string name="lorem_ipsum"></string>
 </resources>
